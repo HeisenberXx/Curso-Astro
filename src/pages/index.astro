@@ -1,5 +1,11 @@
 ---
+//Importaciones
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import Hamburger from "../components/Hamburger.astro";
+import '../styles/global.css'
 
+const pageTitle = 'Página de inicio'
 ---
 
 <html lang="en">
@@ -8,9 +14,15 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<h1>Mi sitio Astro</h1>
+		<Header />
+
+		<Footer />
+		<script>
+			import '../scripts/menu'
+		</script>
 	</body>
 </html>
